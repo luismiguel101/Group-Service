@@ -14,9 +14,9 @@ body {
     align-items: center;
     padding: 20px;
     background-color: #F0EBD8;
+    flex-wrap: wrap;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 .logo {
     display: flex;
@@ -32,7 +32,8 @@ body {
 
 .logo h1 {
     font-size: 24px;
-    letter-spacing: 3px; /* Espaciado entre letras */
+    letter-spacing: 3px;
+    /* Espaciado entre letras */
     color: #201d1d;
     margin: 0;
 }
@@ -68,10 +69,12 @@ h2 {
     color: #e4eeed;
 }
 
-.info p{
+.info p {
     color: #ddd;
 }
-.box, .foto-promos {
+
+.box,
+.foto-promos {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -110,7 +113,8 @@ h2 {
     display: block;
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -213,9 +217,7 @@ h2 {
     font-size: 16px;
 }
 
-
 /* Estilos del footer */
-
 footer {
     background: #2c2c2c;
     color: #fff;
@@ -250,4 +252,94 @@ footer {
 
 .social-icons img:hover {
     transform: scale(1.2);
+}
+
+/* Media Queries para Responsividad */
+@media screen and (max-width: 768px) {
+    /* Ajustes para el header */
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .navegacion ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Ajustes para secciones */
+    section {
+        padding: 20px;
+    }
+
+    /* Ajustes para contenido y producto */
+    .contenido {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .producto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .producto .info {
+        text-align: center;
+    }
+
+    .imagen img {
+        max-width: 100%;
+        width: 250px;
+    }
+
+    /* Ajustes para contenedor de cajas */
+    .contenedor-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes para footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 15px;
+    }
+
+    /* Ajustes para carrusel */
+    .carousel-container {
+        max-width: 100%;
+    }
+
+    .carousel img {
+        width: 100%;
+    }
+}
+
+/* Media Queries para dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .navegacion a {
+        padding: 8px 12px;
+    }
+
+    .prev, .next {
+        padding: 5px;
+    }
 }
